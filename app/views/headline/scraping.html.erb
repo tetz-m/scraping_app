@@ -1,0 +1,35 @@
+<h2>Headline News</h2>
+
+<h4>Yahoo! JAPAN IT</h4>
+<div>
+  <ul>
+    <%@yahoo_link.each_with_index do|link, i|%>
+      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
+        <li><%=link.inner_text%></li>
+      </a>
+      <% break if i == 9 %>
+    <%end%>
+  </ul>
+</div>
+<h4>はてなブックマーク - テクノロジー</h4>
+<div>
+  <ul>
+    <%@hatena_link.each_with_index do|link, i|%>
+      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
+        <li><%=link.inner_text%></li>
+      </a>
+      <% break if i == 8 %>
+    <%end%>
+  </ul>
+</div>
+<h4>日経 xTECH ランキング：総合</h4>
+<div>
+  <ul>
+    <%@tech_link.each_with_index do|link, i|%>
+      <a href='http://tech.nikkeibp.co.jp<%=link.get_attribute(:href)%>' target='_blank'>
+        <li><%=link.inner_text%></li>
+      </a>
+      <% break if i == 9 %>
+    <%end%>
+  </ul>
+</div>
