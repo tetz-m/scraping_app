@@ -20,4 +20,8 @@ class HeadlineController < ApplicationController
     wd = t.strftime("#{weekdays[t.wday]}")
     @time = t.strftime("%Y年%m月%d日(#{wd}) %H時%M分%S秒")
   end
+
+  def update
+    redirect_to :action => 'scraping'
+  end
 end

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  get 'headline/scraping'
   root 'headline#scraping'
+  #get
+  get 'headline/scraping'
+  get 'headline/update'
+  #post
+  post 'headline/scraping'
+  post 'headline/update'
 end
