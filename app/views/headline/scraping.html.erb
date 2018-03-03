@@ -2,34 +2,34 @@
 
 <h4>Yahoo! JAPAN IT</h4>
 <div>
-  <ul>
+  <ol>
     <%@yahoo_link.each_with_index do|link, i|%>
       <a href='<%=link.get_attribute(:href)%>' target='_blank'>
         <li><%=link.inner_text%></li>
       </a>
       <% break if i == 9 %>
     <%end%>
-  </ul>
+  </ol>
 </div>
 <h4>はてなブックマーク - テクノロジー</h4>
 <div>
-  <ul>
+  <ol>
     <%@hatena_link.each_with_index do|link, i|%>
       <a href='<%=link.get_attribute(:href)%>' target='_blank'>
         <li><%=link.inner_text%></li>
       </a>
       <% break if i == 8 %>
     <%end%>
-  </ul>
+  </ol>
 </div>
 <h4>日経 xTECH ランキング：総合</h4>
 <div>
-  <ul>
+  <ol>
     <%@tech_link.each_with_index do|link, i|%>
       <a href='http://tech.nikkeibp.co.jp<%=link.get_attribute(:href)%>' target='_blank'>
         <li><%=link.inner_text%></li>
       </a>
       <% break if i == 9 %>
     <%end%>
-  </ul>
+  </ol>
 </div>
