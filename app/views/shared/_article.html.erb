@@ -1,0 +1,10 @@
+<div>
+  <ol>
+    <%@site_link.each_with_index do|link, i|%>
+      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
+        <li><%=link.inner_text%></li>
+      </a>
+      <% break if i == 9 %>
+    <%end%>
+  </ol>
+</div>

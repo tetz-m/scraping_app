@@ -1,12 +1,9 @@
-<h2>Headline News</h2>
-<%=button_to('更新', {:controller=>'headline', :action=>'update'})%>
-<%=@tenki_date%>
-<%@tenki_link.each do|link|%>
-  <%=link.inner_text[0..1]%>
-  <%=image_tag(@tenki_img, :size => '47x30')%>
-  <font color="red"><%=link.inner_text[2..3]%></font>/<font color="blue"><%=link.inner_text[5..6]%></font>&nbsp;<%=link.inner_text[7..9]%>
-<%end%><br>
-<small>更新日時：<%=@time%></small>
+<small>更新日時：<%=@update_time%></small><br>
+<%=button_to('更新', {:controller=>'headline', :action=>'scraping'})%>
+<%=link_to 'Yahoo', :action => 'scraping', :remote => 'true'%>
+<%=link_to 'はてな', :action => 'scraping', :remote => 'true'%>
+<%=link_to '日経xTECH', :action => 'scraping', :remote => 'true'%>
+
 <h4>Yahoo! JAPAN IT</h4>
 <div>
   <ol>
