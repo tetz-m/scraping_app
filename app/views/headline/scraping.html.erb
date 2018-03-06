@@ -1,13 +1,10 @@
-<small>更新日時：<%=@update_time%></small><br>
-<%=button_to('更新', {:controller=>'headline', :action=>'scraping'})%>
-<%=link_to 'Yahoo', :action => 'scraping', :remote => 'true'%>
-<%=link_to 'はてな', :action => 'scraping', :remote => 'true'%>
-<%=link_to '日経xTECH', :action => 'scraping', :remote => 'true'%>
-
-<h4>Yahoo! JAPAN IT</h4>
+<h3>Headline News</h3>
+<small>更新日時：<%=@update_time%></small>
+<%=button_to '更新', :action=>'scraping'%>
 <div>
+  <h4>ITmedia NEWS アクセスランキング</h4>
   <ol>
-    <%@yahoo_link.each_with_index do|link, i|%>
+    <%@itmedia_link.each_with_index do|link, i|%>
       <a href='<%=link.get_attribute(:href)%>' target='_blank'>
         <li><%=link.inner_text%></li>
       </a>
@@ -15,8 +12,8 @@
     <%end%>
   </ol>
 </div>
-<h4>はてなブックマーク - テクノロジー</h4>
 <div>
+  <h4>はてなブックマーク - テクノロジー</h4>
   <ol>
     <%@hatena_link.each_with_index do|link, i|%>
       <a href='<%=link.get_attribute(:href)%>' target='_blank'>
@@ -26,11 +23,22 @@
     <%end%>
   </ol>
 </div>
-<h4>日経 xTECH ランキング：総合</h4>
 <div>
+  <h4>日経 xTECH ランキング：総合</h4>
   <ol>
     <%@tech_link.each_with_index do|link, i|%>
       <a href='http://tech.nikkeibp.co.jp<%=link.get_attribute(:href)%>' target='_blank'>
+        <li><%=link.inner_text%></li>
+      </a>
+      <% break if i == 9 %>
+    <%end%>
+  </ol>
+</div>
+<div>
+  <h4>Yahoo! JAPAN IT</h4>
+  <ol>
+    <%@yahoo_link.each_with_index do|link, i|%>
+      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
         <li><%=link.inner_text%></li>
       </a>
       <% break if i == 9 %>

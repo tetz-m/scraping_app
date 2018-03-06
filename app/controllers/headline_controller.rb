@@ -9,6 +9,10 @@ class HeadlineController < ApplicationController
   def scraping
     mech = Mechanize.new
 
+    #ITmedia NEWS アクセスランキング
+    page = mech.get('http://www.itmedia.co.jp/news/subtop/ranking/')
+    @itmedia_link = page.search('.colBoxTitle a')
+
     #Yahoo! JAPAN IT
     page = mech.get('https://news.yahoo.co.jp/list/?c=computer')
     @yahoo_link = page.search('.ListBoxwrap a')
