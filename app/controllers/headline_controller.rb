@@ -1,4 +1,19 @@
 class HeadlineController < ApplicationController
+  before_action :detect_devise_variant
+
+  #デバイス判別
+  def detect_devise_variant
+      case request.user_agent
+      when /iPad/
+          request.variant = :tablet
+      when /iPhone/
+          request.variant = :mobile
+      when /iPod/
+          request.variant = :mobile
+      end
+  end
+
+  #更新日時取得
   def update
     weekdays = %w(日 月 火 水 木 金 土)
     t = Time.now
@@ -6,6 +21,7 @@ class HeadlineController < ApplicationController
     @update_time = t.strftime("%Y年%m月%d日(#{wd}) %H時%M分%S秒")
   end
 
+  #スクレイピング処理
   def scraping
     mech = Mechanize.new
 
