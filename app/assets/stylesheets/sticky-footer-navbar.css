@@ -24,15 +24,15 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-body > .container {
+body > .container-fluid {
   padding: 60px 15px 0;
 }
 
-.container a:visited {
+.container-fluid a:visited {
   color: #A757A8;
 }
 
-.footer > .container {
+.footer > .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
 }
