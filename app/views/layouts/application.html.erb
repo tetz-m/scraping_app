@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title>Scraping App</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'sticky-footer-navbar', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render 'shared/header' %>
-    <div id='wrapper'>
-      <div id='contents'>
-        <%= yield %>
-      </div>
-    </div>
+      <%= yield %>
     <%= render 'shared/footer' %>
   </body>
 </html>

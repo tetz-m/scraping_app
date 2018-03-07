@@ -1,3 +1,21 @@
 <header>
-  <%=link_to 'Scraping App', :action => 'scraping'%>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="https://scr-app.herokuapp.com/">Scraping App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://scr-app.herokuapp.com/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://github.com/tetz-m/scraping_app">About</a>
+        </li>
+        <li class="nav-item active">
+          <small class="nav-link">更新日時：<%=@update_time%></small>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>

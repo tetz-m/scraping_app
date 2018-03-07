@@ -1,47 +1,46 @@
-<h3>Headline News</h3>
-<small>更新日時：<%=@update_time%></small>
-<%=button_to '更新', :action=>'scraping'%>
-<div>
-  <h4>ITmedia NEWS アクセスランキング</h4>
-  <ol>
-    <%@itmedia_link.each_with_index do|link, i|%>
-      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
-        <li><%=link.inner_text%></li>
-      </a>
-      <% break if i == 9 %>
-    <%end%>
-  </ol>
-</div>
-<div>
-  <h4>はてなブックマーク - テクノロジー</h4>
-  <ol>
-    <%@hatena_link.each_with_index do|link, i|%>
-      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
-        <li><%=link.inner_text%></li>
-      </a>
-      <% break if i == 8 %>
-    <%end%>
-  </ol>
-</div>
-<div>
-  <h4>日経 xTECH ランキング：総合</h4>
-  <ol>
-    <%@tech_link.each_with_index do|link, i|%>
-      <a href='http://tech.nikkeibp.co.jp<%=link.get_attribute(:href)%>' target='_blank'>
-        <li><%=link.inner_text%></li>
-      </a>
-      <% break if i == 9 %>
-    <%end%>
-  </ol>
-</div>
-<div>
-  <h4>Yahoo! JAPAN IT</h4>
-  <ol>
-    <%@yahoo_link.each_with_index do|link, i|%>
-      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
-        <li><%=link.inner_text%></li>
-      </a>
-      <% break if i == 9 %>
-    <%end%>
-  </ol>
-</div>
+<main role="main" class="container">
+  <div>
+    <h5>ITmedia NEWS アクセスランキング</h5>
+    <ol>
+      <%@itmedia_link.each_with_index do|link, i|%>
+        <a href='<%=link.get_attribute(:href)%>' target='_blank'>
+          <li><%=link.inner_text%></li>
+        </a>
+        <% break if i == 9 %>
+      <%end%>
+    </ol>
+  </div>
+  <div>
+    <h5>はてなブックマーク - テクノロジー</h5>
+    <ol>
+      <%@hatena_link.each_with_index do|link, i|%>
+        <a href='<%=link.get_attribute(:href)%>' target='_blank'>
+          <li><%=link.inner_text%></li>
+        </a>
+        <% break if i == 8 %>
+      <%end%>
+    </ol>
+  </div>
+  <div>
+    <h5>日経 xTECH ランキング：総合</h5>
+    <ol>
+      <%@tech_link.each_with_index do|link, i|%>
+        <a href='http://tech.nikkeibp.co.jp<%=link.get_attribute(:href)%>' target='_blank'>
+          <li><%=link.inner_text%></li>
+        </a>
+        <% break if i == 9 %>
+      <%end%>
+    </ol>
+  </div>
+  <div>
+    <h5>Yahoo! JAPAN IT</h5>
+    <ol>
+      <%@yahoo_link.each_with_index do|link, i|%>
+        <a href='<%=link.get_attribute(:href)%>' target='_blank'>
+          <li><%=link.inner_text%></li>
+        </a>
+        <% break if i == 9 %>
+      <%end%>
+    </ol>
+  </div>
+</main>
