@@ -1,46 +1,46 @@
-<main role="main" class="container">
+<main role='main' class='container'>
   <div>
     <h5>ITmedia NEWS アクセスランキング</h5>
     <ol>
-      <%@itmedia_link.each_with_index do|link, i|%>
-        <a href='<%=link.get_attribute(:href)%>' target='_blank'>
-          <li><%=link.inner_text%></li>
+      <% @itmedia_link.each_with_index do |link, i| %>
+        <a href='<%= link.get_attribute(:href) %>'>
+          <li><%= link.inner_text %></li>
         </a>
         <% break if i == 9 %>
-      <%end%>
+      <% end %>
     </ol>
   </div>
   <div>
     <h5>はてなブックマーク - テクノロジー</h5>
     <ol>
-      <%@hatena_link.each_with_index do|link, i|%>
-        <a href='<%=link.get_attribute(:href)%>' target='_blank'>
-          <li><%=link.inner_text%></li>
+      <% @hatena_link.each_with_index do |link, i| %>
+        <a href='<%= link.get_attribute(:href) %>'>
+          <li><%= link.inner_text %></li>
         </a>
         <% break if i == 8 %>
-      <%end%>
+      <% end %>
     </ol>
   </div>
   <div>
     <h5>日経 xTECH ランキング：総合</h5>
     <ol>
-      <%@tech_link.each_with_index do|link, i|%>
-        <a href='http://tech.nikkeibp.co.jp<%=link.get_attribute(:href)%>' target='_blank'>
-          <li><%=link.inner_text%></li>
+      <% @tech_link.each_with_index do |link, i| %>
+        <a href='http://tech.nikkeibp.co.jp<%= link.get_attribute(:href) %>'>
+          <li><%= link.inner_text %></li>
         </a>
         <% break if i == 9 %>
-      <%end%>
+      <% end %>
     </ol>
   </div>
   <div>
     <h5>Yahoo! JAPAN IT</h5>
     <ol>
-      <%@yahoo_link.each_with_index do|link, i|%>
-        <a href='<%=link.get_attribute(:href)%>' target='_blank'>
-          <li><%=link.inner_text%></li>
+      <% @yahoo_link.each_with_index do |link, i| %>
+        <a href='<%= link.get_attribute(:href) %>'>
+          <li><%= link.inner_text %></li>
         </a>
         <% break if i == 9 %>
-      <%end%>
+      <% end %>
     </ol>
   </div>
 </main>

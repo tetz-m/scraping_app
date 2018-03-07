@@ -27,6 +27,7 @@ class HeadlineController < ApplicationController
     page = mech.get('http://tech.nikkeibp.co.jp/ranking/')
     @tech_link = page.search('.list_rank h3 a')
 
+    #更新日時取得
     update
   end
 end
