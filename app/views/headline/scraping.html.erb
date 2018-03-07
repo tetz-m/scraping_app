@@ -19,7 +19,7 @@
   </ul>
   <div class="tab-content">
     <div id="tab1" class="tab-pane active">
-      <h5><a href="http://www.itmedia.co.jp/pcuser/subtop/ranking/">ITmedia PC USER</a></h5><br>
+      <h6>ITmedia PC USER</h6><br>
       <ol>
         <% @itmedia_link.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
@@ -30,7 +30,7 @@
       </ol>
     </div>
     <div id="tab2" class="tab-pane">
-      <h5><a href="http://b.hatena.ne.jp/hotentry/it?of=9">はてなブックマーク - テクノロジー</a></h5><br>
+      <h6>はてなブックマーク - テクノロジー</h6><br>
       <ol>
         <% @hatena_link.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
@@ -41,7 +41,7 @@
       </ol>
     </div>
     <div id="tab3" class="tab-pane">
-      <h5><a href="https://www.lifehacker.jp/tags/web/cat4/">lifehacker - ソフトウェア</a></h5><br>
+      <h6>lifehacker - ソフトウェア</h6><br>
       <ol>
         <% @lifehacker_link.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
@@ -52,10 +52,10 @@
       </ol>
     </div>
     <div id="tab4" class="tab-pane">
-      <h5><a href="http://tech.nikkeibp.co.jp/ranking/">日経 xTECH ランキング：総合</a></h5><br>
+      <h6>日経 xTECH ランキング：総合</h6><br>
       <ol>
         <% @tech_link.each_with_index do |link, i| %>
-          <a href='http://tech.nikkeibp.co.jp<%= link.get_attribute(:href) %>'>
+          <a href='<%= link.get_attribute(:href) %>'>
             <li><%= link.inner_text %></li>
           </a>
           <% break if i == 19 %>
@@ -63,7 +63,7 @@
       </ol>
     </div>
     <div id="tab5" class="tab-pane">
-      <h5><a href="https://news.yahoo.co.jp/list/?c=computer">Yahoo! JAPAN IT</a></h5><br>
+      <h6>Yahoo! JAPAN IT</h6><br>
       <ol>
         <% @yahoo_link.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
