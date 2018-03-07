@@ -28,6 +28,10 @@ body > .container {
   padding: 60px 15px 0;
 }
 
+.container a:visited {
+  color: #A757A8;
+}
+
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -35,4 +39,8 @@ body > .container {
 
 code {
   font-size: 80%;
+}
+
+.tab-content {
+  padding: 15px;
 }

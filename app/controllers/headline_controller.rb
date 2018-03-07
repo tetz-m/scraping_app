@@ -11,21 +11,25 @@ class HeadlineController < ApplicationController
   def scraping
     mech = Mechanize.new
 
-    #ITmedia NEWS アクセスランキング
-    page = mech.get('http://www.itmedia.co.jp/news/subtop/ranking/')
+    #ITmedia PC USER
+    page = mech.get('http://www.itmedia.co.jp/pcuser/subtop/ranking/')
     @itmedia_link = page.search('.colBoxTitle a')
-
-    #Yahoo! JAPAN IT
-    page = mech.get('https://news.yahoo.co.jp/list/?c=computer')
-    @yahoo_link = page.search('.ListBoxwrap a')
 
     #はてなブックマーク - テクノロジー
     page = mech.get('http://b.hatena.ne.jp/ctop/it')
     @hatena_link = page.search('.hb-entry-link-container a')
 
-    #日経 xTECH ランキング：総合
+    #lifehacker - ソフトウェア
+    page = mech.get('https://www.lifehacker.jp/tags/web/cat4/')
+    @lifehacker_link = page.search('.lh-block-column--1 a')
+
+    #日経 xTECH
     page = mech.get('http://tech.nikkeibp.co.jp/ranking/')
     @tech_link = page.search('.list_rank h3 a')
+
+    #Yahoo! JAPAN IT
+    page = mech.get('https://news.yahoo.co.jp/list/?c=computer')
+    @yahoo_link = page.search('.ListBoxwrap a')
 
     #更新日時取得
     update
