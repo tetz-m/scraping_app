@@ -1,3 +1,4 @@
 *.js linguist-vendored
 bootstrap.min.css linguist-vendored
 application-*.css linguist-vendored
+*.coffee linguist-vendored
