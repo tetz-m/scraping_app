@@ -13,23 +13,23 @@ class HeadlineController < ApplicationController
 
     #ITmedia PC USER
     page = mech.get('http://www.itmedia.co.jp/pcuser/subtop/ranking/')
-    @itmedia_link = page.search('.colBoxTitle a')
+    @itmedia = page.search('.colBoxTitle a')
 
     #はてなブックマーク - テクノロジー
     page = mech.get('http://b.hatena.ne.jp/ctop/it')
-    @hatena_link = page.search('.hb-entry-link-container a')
+    @hatena = page.search('.hb-entry-link-container a')
 
-    #lifehacker - ソフトウェア
-    page = mech.get('https://www.lifehacker.jp/tags/web/cat4/')
-    @lifehacker_link = page.search('.lh-block-column--1 a')
-
-    #日経 xTECH
-    page = mech.get('http://tech.nikkeibp.co.jp/ranking/')
-    @tech_link = page.search('.list_rank h3 a')
+    #TechCrunch Japan
+    page = mech.get('http://jp.techcrunch.com/popular/')
+    @tech = page.search('.trending-container a')
 
     #Yahoo! JAPAN IT
     page = mech.get('https://news.yahoo.co.jp/list/?c=computer')
-    @yahoo_link = page.search('.ListBoxwrap a')
+    @yahoo = page.search('.ListBoxwrap a')
+
+    #朝日新聞デジタル 島根
+    page = mech.get('http://www.asahi.com/area/shimane/list.html')
+    @asahi = page.search('.List a')
 
     #更新日時取得
     update

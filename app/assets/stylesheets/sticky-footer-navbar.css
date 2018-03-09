@@ -29,7 +29,7 @@ body > .container {
 }
 
 .navbar-brand {
-  font-family: fantasy;
+  font-family: sans-serif;
 }
 
 .container a:visited {

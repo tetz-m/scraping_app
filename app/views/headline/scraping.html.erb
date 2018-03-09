@@ -8,20 +8,20 @@
       <a href="#tab2" class="nav-link" data-toggle="tab">はてな</a>
     </li>
     <li class="nav-item">
-      <a href="#tab3" class="nav-link" data-toggle="tab">lifehacker</a>
+      <a href="#tab3" class="nav-link" data-toggle="tab">TechCrunch</a>
     </li>
     <li class="nav-item">
-      <a href="#tab4" class="nav-link" data-toggle="tab">日経</a>
+      <a href="#tab4" class="nav-link" data-toggle="tab">Yahoo!IT</a>
     </li>
     <li class="nav-item">
-      <a href="#tab5" class="nav-link" data-toggle="tab">Yahoo!</a>
+      <a href="#tab5" class="nav-link" data-toggle="tab">朝日新聞</a>
     </li>
   </ul>
   <div class="tab-content">
     <div id="tab1" class="tab-pane active">
       <h6>ITmedia PC USER</h6><br>
       <ol>
-        <% @itmedia_link.each_with_index do |link, i| %>
+        <% @itmedia.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
             <li><%= link.inner_text %></li>
           </a>
@@ -32,7 +32,7 @@
     <div id="tab2" class="tab-pane">
       <h6>はてなブックマーク - テクノロジー</h6><br>
       <ol>
-        <% @hatena_link.each_with_index do |link, i| %>
+        <% @hatena.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
             <li><%= link.inner_text %></li>
           </a>
@@ -41,9 +41,9 @@
       </ol>
     </div>
     <div id="tab3" class="tab-pane">
-      <h6>lifehacker - ソフトウェア</h6><br>
+      <h6>TechCrunch Japan</h6><br>
       <ol>
-        <% @lifehacker_link.each_with_index do |link, i| %>
+        <% @tech.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
             <li><%= link.inner_text %></li>
           </a>
@@ -52,9 +52,9 @@
       </ol>
     </div>
     <div id="tab4" class="tab-pane">
-      <h6>日経 xTECH ランキング：総合</h6><br>
+      <h6>Yahoo! JAPAN IT</h6><br>
       <ol>
-        <% @tech_link.each_with_index do |link, i| %>
+        <% @yahoo.each_with_index do |link, i| %>
           <a href='<%= link.get_attribute(:href) %>'>
             <li><%= link.inner_text %></li>
           </a>
@@ -63,10 +63,10 @@
       </ol>
     </div>
     <div id="tab5" class="tab-pane">
-      <h6>Yahoo! JAPAN IT</h6><br>
+      <h6>朝日新聞デジタル 島根</h6><br>
       <ol>
-        <% @yahoo_link.each_with_index do |link, i| %>
-          <a href='<%= link.get_attribute(:href) %>'>
+        <% @asahi.each_with_index do |link, i| %>
+          <a href='https://www.asahi.com<%= link.get_attribute(:href) %>'>
             <li><%= link.inner_text %></li>
           </a>
           <% break if i == 19 %>
