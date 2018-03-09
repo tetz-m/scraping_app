@@ -25,23 +25,28 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-body > .container-fluid {
-  padding: 60px 15px 0;
+body > .container {
+  padding: 60px 0px 0;
+  margin: 0;
 }
 
-.container-fluid a:visited {
+.navbar-brand {
+  font-family: sans-serif;
+}
+
+.container a:visited {
   color: #A757A8;
 }
 
-.footer > .container-fluid {
+.tab-content {
+  padding: 15px;
+}
+
+.footer > .container {
   padding-right: 15px;
   padding-left: 15px;
 }
 
 code {
   font-size: 80%;
-}
-
-.tab-content {
-  padding: 15px;
 }
