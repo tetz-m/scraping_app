@@ -26,11 +26,11 @@ body {
 /* Not required for template or sticky footer method. */
 
 body > .container {
-  padding: 60px 15px 0;
+  padding: 15px 15px 0;
 }
 
 .navbar-brand {
-  font-family: fantasy;
+  font-family: sans-serif;
 }
 
 .container a:visited {
@@ -46,6 +46,6 @@ code {
   font-size: 80%;
 }
 
-.tab-content {
+.tab-content, .description {
   padding: 15px;
 }

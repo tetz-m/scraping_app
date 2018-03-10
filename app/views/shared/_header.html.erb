@@ -1,16 +1,19 @@
 <header>
-  <nav class='navbar navbar-expand-md navbar-dark fixed-top bg-dark'>
-    <a class='navbar-brand' href='https://scr-app.herokuapp.com/'>Scraping App</a>
-    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class='navbar-toggler-icon'></span>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <%= link_to "Scraping App", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class='collapse navbar-collapse' id='navbarCollapse'>
-      <ul class='navbar-nav mr-auto'>
-        <li class='nav-item active'>
-          <a class='nav-link' href='https://scr-app.herokuapp.com/'>Home</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li class='nav-item active'>
-          <small class='nav-link'>更新日時：<%= @update_time %></small>
+        <li class="nav-item active">
+          <%= link_to "About", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <small class="nav-link">更新日時：<%= @update_time %></small>
         </li>
       </ul>
     </div>

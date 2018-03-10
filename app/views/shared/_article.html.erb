@@ -1,10 +1,55 @@
-<div>
+<div id="tab1" class="tab-pane active">
+  <h6>ITmedia PC USER</h6><br>
   <ol>
-    <%@site_link.each_with_index do|link, i|%>
-      <a href='<%=link.get_attribute(:href)%>' target='_blank'>
-        <li><%=link.inner_text%></li>
+    <% @itmedia.each_with_index do |link, i| %>
+      <a href="<%= link.get_attribute(:href) %>">
+        <li><%= link.inner_text %></li>
       </a>
-      <% break if i == 9 %>
-    <%end%>
+      <% break if i == 19 %>
+    <% end %>
+  </ol>
+</div>
+<div id="tab2" class="tab-pane">
+  <h6>はてなブックマーク - テクノロジー</h6><br>
+  <ol>
+    <% @hatena.each_with_index do |link, i| %>
+      <a href="<%= link.get_attribute(:href) %>">
+        <li><%= link.inner_text %></li>
+      </a>
+      <% break if i == 19 %>
+    <% end %>
+  </ol>
+</div>
+<div id="tab3" class="tab-pane">
+  <h6>TechCrunch Japan</h6><br>
+  <ol>
+    <% @tech.each_with_index do |link, i| %>
+      <a href="<%= link.get_attribute(:href) %>">
+        <li><%= link.inner_text %></li>
+      </a>
+      <% break if i == 19 %>
+    <% end %>
+  </ol>
+</div>
+<div id="tab4" class="tab-pane">
+  <h6>Yahoo! JAPAN IT</h6><br>
+  <ol>
+    <% @yahoo.each_with_index do |link, i| %>
+      <a href="<%= link.get_attribute(:href) %>">
+        <li><%= link.inner_text %></li>
+      </a>
+      <% break if i == 19 %>
+    <% end %>
+  </ol>
+</div>
+<div id="tab5" class="tab-pane">
+  <h6>朝日新聞デジタル 島根</h6><br>
+  <ol>
+    <% @asahi.each_with_index do |link, i| %>
+      <a href="https://www.asahi.com<%= link.get_attribute(:href) %>">
+        <li><%= link.inner_text %></li>
+      </a>
+      <% break if i == 19 %>
+    <% end %>
   </ol>
 </div>

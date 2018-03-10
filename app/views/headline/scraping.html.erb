@@ -1,78 +1,8 @@
-<main role='main' class='container'>
+<main role="main" class="container">
 <div class="p-3">
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a href="#tab1" class="nav-link" data-toggle="tab">ITmedia</a>
-    </li>
-    <li class="nav-item">
-      <a href="#tab2" class="nav-link" data-toggle="tab">はてな</a>
-    </li>
-    <li class="nav-item">
-      <a href="#tab3" class="nav-link" data-toggle="tab">TechCrunch</a>
-    </li>
-    <li class="nav-item">
-      <a href="#tab4" class="nav-link" data-toggle="tab">Yahoo!IT</a>
-    </li>
-    <li class="nav-item">
-      <a href="#tab5" class="nav-link" data-toggle="tab">朝日新聞</a>
-    </li>
-  </ul>
+  <%= render "shared/menu" %>
   <div class="tab-content">
-    <div id="tab1" class="tab-pane active">
-      <h6>ITmedia PC USER</h6><br>
-      <ol>
-        <% @itmedia.each_with_index do |link, i| %>
-          <a href='<%= link.get_attribute(:href) %>'>
-            <li><%= link.inner_text %></li>
-          </a>
-          <% break if i == 19 %>
-        <% end %>
-      </ol>
-    </div>
-    <div id="tab2" class="tab-pane">
-      <h6>はてなブックマーク - テクノロジー</h6><br>
-      <ol>
-        <% @hatena.each_with_index do |link, i| %>
-          <a href='<%= link.get_attribute(:href) %>'>
-            <li><%= link.inner_text %></li>
-          </a>
-          <% break if i == 19 %>
-        <% end %>
-      </ol>
-    </div>
-    <div id="tab3" class="tab-pane">
-      <h6>TechCrunch Japan</h6><br>
-      <ol>
-        <% @tech.each_with_index do |link, i| %>
-          <a href='<%= link.get_attribute(:href) %>'>
-            <li><%= link.inner_text %></li>
-          </a>
-          <% break if i == 19 %>
-        <% end %>
-      </ol>
-    </div>
-    <div id="tab4" class="tab-pane">
-      <h6>Yahoo! JAPAN IT</h6><br>
-      <ol>
-        <% @yahoo.each_with_index do |link, i| %>
-          <a href='<%= link.get_attribute(:href) %>'>
-            <li><%= link.inner_text %></li>
-          </a>
-          <% break if i == 19 %>
-        <% end %>
-      </ol>
-    </div>
-    <div id="tab5" class="tab-pane">
-      <h6>朝日新聞デジタル 島根</h6><br>
-      <ol>
-        <% @asahi.each_with_index do |link, i| %>
-          <a href='https://www.asahi.com<%= link.get_attribute(:href) %>'>
-            <li><%= link.inner_text %></li>
-          </a>
-          <% break if i == 19 %>
-        <% end %>
-      </ol>
-    </div>
+    <%= render "shared/article" %>
   </div>
 </div>
 </main>
