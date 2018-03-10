@@ -26,7 +26,8 @@ body {
 /* Not required for template or sticky footer method. */
 
 body > .container {
-  padding: 60px 15px 0;
+  margin-top: 56px;
+  padding: 0;
 }
 
 .navbar-brand {
@@ -37,15 +38,14 @@ body > .container {
   color: #A757A8;
 }
 
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
 code {
   font-size: 80%;
 }
 
-.tab-content {
+.tab-content, .description {
   padding: 15px;
+}
+
+footer > .container {
+  padding: 0;
 }
