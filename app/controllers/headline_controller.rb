@@ -3,7 +3,7 @@ class HeadlineController < ApplicationController
   def scraping
     mech = Mechanize.new
 
-    #ITmedia PC USER
+    #ITmedia PC USER - アクセスランキング
     page = mech.get("http://www.itmedia.co.jp/pcuser/subtop/ranking/")
     @itmedia = page.search(".colBoxTitle a")
 
@@ -11,17 +11,17 @@ class HeadlineController < ApplicationController
     page = mech.get("http://b.hatena.ne.jp/hotentry/it?of=9")
     @hatena = page.search(".hb-entry-link-container a")
 
-    #TechCrunch Japan
+    #TechCrunch Japan - 人気
     page = mech.get("http://jp.techcrunch.com/popular/")
     @tech = page.search(".trending-container a")
 
-    #Yahoo! JAPAN IT
+    #Yahoo! JAPAN - IT
     page = mech.get("https://news.yahoo.co.jp/list/?c=computer")
     @yahoo = page.search(".ListBoxwrap a")
 
-    #朝日新聞デジタル 島根
-    page = mech.get("http://www.asahi.com/area/shimane/list.html")
-    @asahi = page.search(".List a")
+    #Gigazine - ソフトウェア
+    page = mech.get("https://gigazine.net/news/C4/")
+    @gigazine = page.search(".card h2 a")
 
     #更新日時取得
     update
