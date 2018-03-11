@@ -8,7 +8,7 @@ class HeadlineController < ApplicationController
     @itmedia = page.search(".colBoxTitle a")
 
     #はてなブックマーク - テクノロジー
-    page = mech.get("http://b.hatena.ne.jp/ctop/it")
+    page = mech.get("http://b.hatena.ne.jp/hotentry/it?of=9")
     @hatena = page.search(".hb-entry-link-container a")
 
     #TechCrunch Japan
