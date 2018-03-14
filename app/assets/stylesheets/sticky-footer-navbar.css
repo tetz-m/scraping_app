@@ -48,3 +48,7 @@ code {
 footer > .container {
   padding: 0;
 }
+
+.description li, .description p {
+  font-size: 90%;
+}
