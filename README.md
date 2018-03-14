@@ -1,4 +1,4 @@
-The Japanese README is [here.]()
+The Japanese README is [here.](https://github.com/tetz-m/scraping_app/blob/master/README_ja.md)
 
 # scraping_app
 It is a Rails application for easily browsing the list of news articles.  
@@ -26,7 +26,7 @@ Scrapp : https://scr-app.herokuapp.com/
 - Rails 5.1.5
 
 - [Mechanize](https://github.com/sparklemotion/mechanize)
-  
+
 - [Bootstrap 4](https://getbootstrap.com/)
 
 ## Usage
