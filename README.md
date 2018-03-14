@@ -27,7 +27,7 @@ or check the link of the article part from the source of the Web site and write 
 
 - Mechanize : Mechanize is a gem for scraping.
   
-- Bootstrap 4 :Bootstrap is a design template.
+- Bootstrap 4 : Bootstrap is a design template.
 
 ## Usage
 1.Install rails and Mechanize and bundle install.
