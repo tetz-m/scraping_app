@@ -8,26 +8,26 @@ I created the sample to efficiently and easily browse articles of a specific pag
 You can check with the sample below.
 
 ## Description
-- It is convenient when you want to read articles of a specific page easily.
-- Because it corresponds to responsive, it can also browse with PC, tablet, smartphone.
-- Depending on customization, various information can be acquired and displayed.
+- It is easy to read because it is displayed briefly on the TOP page. Also, it saves you the trouble of visiting multiple sites.  
+- Because it corresponds to responsive web design, it can also browse with PC, tablet and smartphone.
+- By customizing, you can extract and display your favorite information.
 
 ## Sample
 Scrapp : https://scr-app.herokuapp.com/
 
 ## Improvement
-- Depending on the website, information may not be extracted.
-- Since there is no registration screen of the Web site to be extracted, it is necessary to make a registration screen,  
-or check the link of the article part from the source of the Web site and write it in the processing part.
+- There are sites that can not extract information well because it is a sample. Since there is an extraction method by XPath etc, consideration is necessary.
+- Since we do not make a registration screen (screen to register the site to extract), we need to make it if necessary.  
+- As the number of sites and articles to be registered increases, it takes time to draw the screen, so speed improvement is necessary.
 
 ## Dependency
 - Ruby 2.4.3
 
 - Rails 5.1.5
 
-- Mechanize : Mechanize is a gem for scraping.
+- [Mechanize](https://github.com/sparklemotion/mechanize)
   
-- Bootstrap 4 : Bootstrap is a design template.
+- [Bootstrap 4](https://getbootstrap.com/)
 
 ## Usage
 1.Install rails and Mechanize and bundle install.
