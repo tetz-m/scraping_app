@@ -1,11 +1,11 @@
+The Japanese README is [here.]()
+
 # scraping_app
-It is rails sample application for scraping articles.
+It is a Rails application for easily browsing the list of news articles.  
 
 ## Overview
-This application uses the technology called Web scraping.   
-Web scraping can extract and process information on web pages.   
-I created the sample to efficiently and easily browse articles of a specific page.  
-You can check with the sample below.
+It is an application created to efficiently and easily browse the list of news articles of multiple sites by using Web scraping (technology which can extract and process Web page information).  
+You can check the sample from the link below.
 
 ## Description
 - It is easy to read because it is displayed briefly on the TOP page. Also, it saves you the trouble of visiting multiple sites.  
