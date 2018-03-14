@@ -5,8 +5,8 @@
 Webスクレイピング（Webページの情報を抽出して加工することができる技術）を利用して複数のサイトのニュース記事を効率よく手軽に閲覧するために作成したアプリです。
 サンプルは下記のリンクから確認できます。
 
-## Description
-- TOPページに簡潔に表示されるので閲覧しやすいです。また、複数のサイトを訪問する手間が省けます。  
+## 説明
+- TOPページに簡潔に表示されるので閲覧しやすいです。また、複数のサイトを訪問する手間が省けます。  
 - レスポンシブウェブデザインに対応しているため、PC、タブレット、スマートフォンでも閲覧可能です。
 - カスタマイズによって、自分好みの情報を抽出して表示できます。
 
@@ -28,12 +28,12 @@ Scrapp : https://scr-app.herokuapp.com/
 - [Bootstrap 4](https://getbootstrap.com/)
 
 ## 使用方法
-1.Railsをインストール後、gemのMechanizeをbundle installしてください。
+1. Railsをインストール後、gemのMechanizeをbundle installしてください。
 
-2.以下のcontrollerに抽出したいWebサイトのURLとリンクを書きます。
+2. 以下のcontrollerに抽出したいWebサイトのURLとリンクを書きます。
 - \app\controllers\eadline_controller.rb
 
-3.以下のviewを修正してください。  
+3. 以下のviewを修正してください。  
 - \app\views\shared\_article.html.erb  
 - \app\views\shared\_menul.erb  
 
