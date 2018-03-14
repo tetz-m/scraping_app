@@ -28,14 +28,7 @@ Scrapp : https://scr-app.herokuapp.com/
 - [Bootstrap 4](https://getbootstrap.com/)
 
 ## 使用方法
-1. Railsをインストール後、gemのMechanizeをbundle installしてください。
-
-2. 以下のcontrollerに抽出したいWebサイトのURLとリンクを書きます。
-- \app\controllers\eadline_controller.rb
-
-3. 以下のviewを修正してください。  
-- \app\views\shared\_article.html.erb  
-- \app\views\shared\_menul.erb  
+- Mechanizeをbundle installしてください。
 
 ## 著者
 tetz-m

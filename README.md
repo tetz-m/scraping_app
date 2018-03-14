@@ -30,14 +30,7 @@ Scrapp : https://scr-app.herokuapp.com/
 - [Bootstrap 4](https://getbootstrap.com/)
 
 ## Usage
-1.Install rails and Mechanize and bundle install.
-
-2.Write URL and link of web site you want to extract to controller.  
-- \app\controllers\eadline_controller.rb
-
-3.Correct the following view files.  
-- \app\views\shared\_article.html.erb  
-- \app\views\shared\_menul.erb  
+- Please bundle install Mechanize.
 
 ## Author
 tetz-m
