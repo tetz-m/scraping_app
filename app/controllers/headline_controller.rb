@@ -8,8 +8,8 @@ class HeadlineController < ApplicationController
     @itmedia = page.search(".colBoxTitle a")
 
     #はてなブックマーク - テクノロジー
-    page = mech.get("http://b.hatena.ne.jp/hotentry/it?of=9")
-    @hatena = page.search(".hb-entry-link-container a")
+    page = mech.get("http://b.hatena.ne.jp/hotentry/it")
+    @hatena = page.search(".entrylist-contents-title a")
 
     #TechCrunch Japan - 人気
     page = mech.get("http://jp.techcrunch.com/popular/")
