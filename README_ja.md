@@ -21,7 +21,7 @@ Scrapp : https://scr-app.herokuapp.com/
 ## 依存関係
 - Ruby 2.4.3
 
-- Rails 5.1.5
+- Rails 5.1.6
 
 - [Mechanize](https://github.com/sparklemotion/mechanize)
 
